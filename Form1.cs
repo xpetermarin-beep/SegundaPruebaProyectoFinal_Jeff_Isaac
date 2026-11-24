@@ -148,7 +148,14 @@ namespace SegundaPruebaProyectoFinal_Jeff_Isaac
                         {
                             MessageBox.Show($"¡Bienvenido, {nombreUsuario}!",
                                 "Inicio exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                          
+                            Hide();
+                            using (var ventanaPrincipal = new Menuprincipal(txtUsuarioLogin.Text.Trim()))
+                            {
+                                
+                                ventanaPrincipal.ShowDialog();
+                            }
+                            Close();
+
 
                         }
                         else

@@ -117,7 +117,7 @@ namespace SegundaPruebaProyectoFinal_Jeff_Isaac
 
         {
             lblError.Visible = false;
-            // ✅ Tus validaciones — NO se tocan
+          
             if (string.IsNullOrWhiteSpace(txtUsuarioRegistro.Text) || string.IsNullOrWhiteSpace(txtUsuarioRegistro.Text))
             {
                 lblError.Visible = true;
@@ -133,7 +133,7 @@ namespace SegundaPruebaProyectoFinal_Jeff_Isaac
 
             try
             {
-                // 🔹 Verificar si el usuario ya existe en la base de datos
+               
                 bool usuarioExiste = false;
 
                 using (var conexion = ConexionBD.ObtenerConexion())
@@ -156,7 +156,7 @@ namespace SegundaPruebaProyectoFinal_Jeff_Isaac
                     return;
                 }
 
-                // 🔹 Insertar el nuevo usuario en la base de datos
+               
                 using (var conexion = ConexionBD.ObtenerConexion())
                 {
                     conexion.Open();
@@ -174,7 +174,7 @@ namespace SegundaPruebaProyectoFinal_Jeff_Isaac
                     }
                 }
 
-                // ✅ Mensaje de éxito — igual que antes
+                
                 MessageBox.Show("Registro exitoso!\nYa puedes iniciar sesión!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
