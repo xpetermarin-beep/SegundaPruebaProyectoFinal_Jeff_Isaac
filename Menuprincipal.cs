@@ -77,8 +77,14 @@ namespace SegundaPruebaProyectoFinal_Jeff_Isaac
         {
             FormVer formVer = new FormVer();
             formVer.Show();
-            
 
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            FormEliminar formEliminar = new FormEliminar();
+            formEliminar.Show();
         }
     }
 
